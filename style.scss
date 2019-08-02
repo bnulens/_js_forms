@@ -1,7 +1,13 @@
+@import 'mixNmatch';
+
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#4a4a4a,#1C110A);
 }
 
 #container {
@@ -16,16 +22,48 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 40px;
+    background-image: linear-gradient(#1C110A, #4a4a4a);
+    border-radius: 6px;
+    border: 2px solid rgb(255, 140, 0);
+
     .personals, .valuables, .location{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
+    .form-buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
-.personals input, textarea {
-    height: 30px;
-    border: 1px solid #ebebeb;
-    border-radius: 5px;
+.personals input, textarea{
+    @include input-fields;
 }
+
+.valuables {
+    margin-top: 30px;
+    input {
+    @include input-fields;
+    }
+    label {
+    color: white;
+    font-size: 0.8em;
+    }
+}
+
+.location {
+    label {
+        color: white;
+    }
+    #country{
+    color: white;
+    background-color: transparent;
+    }
+    input {
+    background-color: transparent; 
+    }
+}
+
