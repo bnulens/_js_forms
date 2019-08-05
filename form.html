@@ -10,26 +10,28 @@
 <body>
     <div id="container" type="container">
         <form id="registration" type="form">
+            <h2>Sign Up</h2>
             <div class="personals">
-                <input id="first-name" type="text" name="name" placeholder="name" maxlength="30" required>
-                <input id="last-name" type="text" name="name" placeholder="lastname" maxlength="30 "required>
-                <input id="user-name" type="text" name="name" placeholder="username" required>
+                <input id="first-name" type="text" name="first-name" placeholder="name" maxlength="30" required>
+                <input id="last-name" type="text" name="last-name" placeholder="lastname" maxlength="30 "required>
+                <input id="user-name" type="text" name="user-name" placeholder="username" required>
                 <input id="phone-number" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="telephone" required>
-                <input id="person-age" type="number" name="age" placeholder="age" min="17" max="99">
+                <input id="person-age" type="number" name="age" placeholder="age" min="14" max="99">
                 <textarea id="hobbies" type="text" name="hobbies" placeholder="your hobbies"></textarea>
             </div>
             <div class="valuables">
-                <label>email:</label>
+                <label>e-mail:</label>
                 <input id="email-input" type="email" name="user_email" pattern=".+@gmail.com" placeholder="somebody@gmail.com" 
                 title="Please provide a G-mail address"required> 
-                <label>Password:</label>
-                <input id="password-input" type="password" name="pswd" required>
-                <label>Confirm Password:</label>
+                <label>password:</label>
+                <input id="password-input" type="password" name="pswd" placeholder="password (7-14 characters)" required>
+                <label>Confirm password:</label>
                 <input id="confirm" type="password" name="pswd" required>
             </div>
             <div class="location">
                 <label>Country:</label>
                 <select id="country" name="country" required>
+                        <option value="">Choose country</option>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -278,16 +280,16 @@
                         <option value="Zimbabwe">Zimbabwe</option>
                      </select>
                      <label>ZIP or Postal Code:</label>
-                     <input type="number" name="zip" required>
+                     <input id="postal-code" type="text" name="zip" required>
                      <label>
                  </div>
           <div class="form-buttons">
               <label>
-                 <input id="consent"type="checkbox" name="terms" required>
+                 <input id="consent" type="checkbox" name="terms" value="0" required>
                      I agree to the terms and conditions
               </label>
-              <button id="sign-up" type="button" value="Submit">Sign Up</button>
-              <button id="cancel" type="button">Cancel</button>
+              <button id="sign-up" type="button" onclick="formValidation()">Sign Up</button>
+              <button id="cancel" type="button" onclick="clearAll()">Clear</button>
           </div>
           <div id="data-display"></div>
         </form>

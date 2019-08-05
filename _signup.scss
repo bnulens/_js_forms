@@ -1,0 +1,22 @@
+$bg-color: #222222;
+$border: #228DFF;
+$label-color: #0090ff;
+$cancel: #ff8400;
+$confirm: #00ffae;
+
+@mixin input-fields-personal {
+    background-color: transparent;
+    height: 4.2em;
+    border: 1px solid #228DFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@mixin input-fields-valuables {
+    background-color: transparent;
+    height: 2em;
+    border: 1px solid #228DFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
